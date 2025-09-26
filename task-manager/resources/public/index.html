@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Task Manager</h1>
+    <div id="summary"></div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Novi task</h2>
+      <form id="newTaskForm">
+        <div class="row">
+          <label>Naslov*</label>
+          <input name="title" required maxlength="120" placeholder="Npr. Napravi plan ucenja" />
+        </div>
+        <div class="row">
+          <label>Opis</label>
+          <textarea name="desc" rows="2" placeholder="Kratak opis"></textarea>
+        </div>
+        <div class="row grid">
+          <div>
+            <label>Prioritet</label>
+            <select name="priority">
+              <option value="medium" selected>Srednji</option>
+              <option value="low">Nizak</option>
+              <option value="high">Visok</option>
+            </select>
+          </div>
+          <div>
+            <label>Rok (kada treba da bude gotovo)</label>
+            <input name="due" type="date" />
+          </div>
+          <div>
+            <label>Tagovi (zarez)</label>
+            <input name="tags" placeholder="fakultet, AMSI" />
+          </div>
+        </div>
+        <button type="submit">Dodaj</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Filteri</h2>
+      <div class="row grid">
+        <div>
+          <label>Status</label>
+          <select id="filterStatus">
+            <option value="">Svi</option>
+            <option value="todo">To-Do</option>
+            <option value="doing">Doing</option>
+            <option value="blocked">Blocked</option>
+            <option value="done">Done</option>
+          </select>
+        </div>
+        <div>
+          <label>Prioritet</label>
+          <select id="filterPriority">
+            <option value="">Svi</option>
+            <option value="low">Nizak</option>
+            <option value="medium">Srednji</option>
+            <option value="high">Visok</option>
+          </select>
+        </div>
+        <div>
+          <label>Tag</label>
+          <input id="filterTag" placeholder="npr. Putovanje" />
+        </div>
+        <div>
+          <label>Pretraga</label>
+          <input id="filterQ" placeholder="naslov/opis" />
+        </div>
+      </div>
+      <div class="row">
+        <label>Rok pre</label>
+        <input id="filterDueBefore" type="date" />
+      </div>
+      <div class="row">
+        <button id="btnApply" type="button">Primeni</button>
+        <button id="btnClear" type="button" class="ghost">Reset filtera</button>
+      </div>
+
+    </section>
+
+    <section class="card">
+    <div class="row" style="justify-content:space-between;align-items:center;">
+      <h2 style="margin:0">Taskovi</h2>
+      <div class="row" style="gap:8px">
+        <span id="resultsCount" class="muted">0 rezultata</span>
+        <label style="display:flex;gap:6px;align-items:center;color:#9aa4b2;font-size:12px">
+         Sort:
+          <select id="sortSelect">
+            <option value="due-asc">Due (najskoriji prvo)</option>
+            <option value="due-desc">Due </option>
+            <option value="prio-desc">Prioritet  (high-low)</option>
+            <option value="prio-asc">Prioritet </option>
+            <option value="status">Status (todo-done)</option>
+            <option value="created-desc">Najnoviji kreirani</option>
+            <option value="created-asc">Najstariji kreirani</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  <div id="tasks"></div>
+  </section>
+
+  </main>
+
+  <footer>
+    <button id="btnResetDb" type="button" class="danger">Reset DataBase</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

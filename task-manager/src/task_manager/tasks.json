@@ -1,0 +1,43 @@
+{
+  "tasks" : [ {
+    "updated-at" : "2025-09-24T21:42:38.444Z",
+    "tags" : [ "fakultet", "AMSI" ],
+    "desc" : "Use-case i sekvencijski",
+    "due" : "2025-10-05",
+    "title" : "Napravi UML",
+    "priority" : "high",
+    "status" : "todo",
+    "id" : 1,
+    "created-at" : "2025-09-24T21:42:38.444Z"
+  }, {
+    "updated-at" : "2025-09-24T22:53:34.037Z",
+    "tags" : [ ],
+    "desc" : "za potrebe master rada treba da napišem kod u haskellu po uzoru na moj java kod",
+    "due" : "2025-10-05",
+    "title" : "Kod u Haskellu",
+    "priority" : null,
+    "status" : null,
+    "id" : 2,
+    "created-at" : "2025-09-24T21:57:30.058Z"
+  }, {
+    "updated-at" : "2025-09-24T22:20:51.784Z",
+    "tags" : [ "Putovanje" ],
+    "desc" : "kupiti karte za Nicu",
+    "due" : "2025-12-10",
+    "title" : "kupiti karte za Nicu",
+    "priority" : null,
+    "status" : null,
+    "id" : 3,
+    "created-at" : "2025-09-24T21:58:27.434Z"
+  }, {
+    "updated-at" : "2025-09-24T22:20:30.372Z",
+    "tags" : [ "Putovanje" ],
+    "desc" : "treba da se spakujem za put u Nicu",
+    "due" : "2025-09-11",
+    "title" : "pakovanje",
+    "priority" : "low",
+    "status" : "todo",
+    "id" : 4,
+    "created-at" : "2025-09-24T22:20:30.373Z"
+  } ]
+}
